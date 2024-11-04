@@ -1,0 +1,103 @@
+\documentclass[french]{article}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[skip=10pt, indent=0pt]{parskip}
+
+\usepackage[T1]{fontenc}    % Encodage T1 (adapté au français)
+\usepackage{lmodern}        % Caractères plus lisibles
+\usepackage{babel}
+
+\newcommand{\ifnotext}[3]{%
+  \sbox0{#1}%
+  \ifdim\wd0=0pt
+    {#2}% if #1 is empty
+  \else
+    {#3}% if #1 is not empty
+  \fi
+}
+
+% Make it bold and a bit smaller
+\newcommand{\fixmetodomaybetext}[1]{\ifnotext{#1}{}{: #1}}
+\newcommand{\FIXME}[1]{\small\textbf{FIXME\fixmetodomaybetext{#1}}\normalsize}
+\newcommand{\TODO}[1]{\small\textbf{TODO\fixmetodomaybetext{#1}}\normalsize}
+
+\newcommand{\feuille}[1]{\chapter{#1}}
+\newcommand{\theme}[1]{\section{#1}}
+\newcommand{\exercice}[2]{\subsection[Exercice \no#1]{Exercice \no#1 - #2}}
+\newcommand{\question}[1]{\subsubsection{Question \no#1}}
+
+\hypersetup{
+    breaklinks,
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+\title{Exercices Corrigés d'OML}
+\author{Axel PASCON}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\feuille{Exercices de grosse feuille de TD}
+\TODO{Nom de chapitre davantage approprié}
+
+\theme{Fonctions de base}
+
+\exercice{1}{Droites}
+
+\question{1}
+\TODO{}
+\question{2}
+\TODO{}
+
+\exercice{4}{Courbes à connaître}
+\question{1}
+
+(1) --> \( y = 1 \)
+(2) --> \( y = x^2 \)
+(3) --> \( y = 1 \)
+
+\TODO{Finish it with a proper table instead}
+
+\exercice{12}{Vidange d'un réservoir}
+
+\question{1}
+
+Si \(h\_{0}\) augmente, alors \(t\_{0}\) augmente.
+Si \(S\_{1}\) augmente, alors \(t\_{0}\) augmente.
+Si \(S\_{2}\) augmente, alors \(t\_{0}\) diminue.
+
+\question{2}
+dev-perl/Template-Plugin-Latex
+(b), (c) et (d) ne correspondent pas aux observations précédentes.
+Par ailleurs, certaines violent les règles d'homogénéité.
+
+Par déduction, seule (a) est possible.
+
+\question{3}
+
+\TODO{Tracer les courbes (apprendre à le faire, déjà\dots lol)}
+
+\exercice{1}{Pulsation et Amplitude d'un signal}
+
+\question{1}
+
+Fonction définie par \(f = 2\sin(t)\): la plus "grande" / ample des courbes
+Fonction définie par \(g = \sin(2t)\): la dernière, par déduction
+Fonction définie par \(h = \sin(4t)\): la plus "rapide" des courbes, celle avec la plus petite période
+
+\exercice{2}{Pulsation et Amplitude d'un signal}
+
+\question{1}
+
+Fonction définie par \(m(t) = 2\cos(0.5t - 1.5)\): \TODO{}
+Fonction définie \dots 
+
+\end{document}
